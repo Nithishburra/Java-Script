@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Elements</title>
+</head>
+<body>
+    <div>
+        <span id ="myid1" title="hello1">Span1</span>
+        <span id ="myid2" title="hello2">Span2</span>
+        <span id ="myid3" title="hello3">Span3</span>
+    </div>
+</body>
+   <script>
+
+        const div = document.querySelector("div");
+
+        const span1 = document.querySelector("#myid1");
+
+        const span2 = document.querySelector("#myid2");
+
+        const span3 = document.querySelector("#myid3");
+
+         span1.remove();
+         
+
+         console.log(span1.id);
+         console.log(span2.title);
+         console.log(span3.id);
+       
+
+         
+
+
+         span2.setAttribute("key1","value1");
+         span3.setAttribute("key2","value2");
+
+
+
+        span2.removeAttribute("id");
+        span3.removeAttribute("title");
+
+         
+
+   </script>
+</html>

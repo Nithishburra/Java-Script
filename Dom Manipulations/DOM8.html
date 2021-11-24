@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM</title>
+<style>
+    .gparent{
+        width:500px;
+        height: 500px;
+        background-color: coral;
+    }
+    .parent{
+        width:480px;
+        height:200px;
+        margin: 20px 10px;
+       background-color: cornflowerblue;
+         display: flex;
+    }
+
+    .child{
+        width:190px;
+        height:150px;
+        margin:20px;
+        background-color: darkgoldenrod;
+    }
+</style>
+</head>
+<body>
+    <div class ="gparent" id="gparent">
+       <div class ="parent" id="parent1">
+         <div class ="child" id="c1"></div>
+         <div class ="child" id="c2"></div>
+       </div>
+
+        <div class="parent" id="parent2">
+        <div class="child" id="c3"></div>
+        <div class="child" id="c4"></div>
+        </div> 
+
+    </div>
+</body>
+<script>
+
+    //get the ref of grandparent
+     //sol_1
+     /*
+    document.getElementById("gparent").style.backgroundColor = "red";
+    document.getElementById("parent1").style.backgroundColor = "yellow";
+    document.getElementById("parent2").style.backgroundColor ="yellow";
+    document.getElementById("c1").style.backgroundColor = "green";
+    document.getElementById("c2").style.backgroundColor ="green";
+    document.getElementById("c3").style.backgroundColor ="green";
+    document.getElementById("c4").style.backgroundColor ="green";
+    */
+
+
+
+   //sol_2
+   /*  ID
+   document.querySelector("#gparent").style.backgroundColor = "pink"
+   document.querySelector("#parent1").style.backgroundColor = "blue"
+   document.querySelector("#parent2").style.backgroundColor = "blue"
+   document.querySelector("#c1").style.backgroundColor = "green"
+   document.querySelector("#c2").style.backgroundColor = "green"
+   document.querySelector("#c3").style.backgroundColor = "yellow"
+   document.querySelector("#c4").style.backgroundColor = "yellow"
+   */
+
+   //sol_3
+   //class
+
+  
+   /* document.querySelector(".gparent").style.backgroundColor ="black"
+   //document.querySelector(".parent").style.backgroundColor ="black"
+   Array.from(document.querySelectorAll(".parent")).forEach((element,index)=>{
+         element.style.backgroundColor="salmon";
+   });*/
+
+
+    /*   
+   const p1 = document.querySelector(".parent");
+   p1.style.backgroundColor = "green"
+   let childrens = p1.children;
+   for(let c of childrens){
+     c.style.backgroundColor ="grey"
+  }*/
+  
+
+  /*
+  const p2 = document.querySelector("#parent2");
+  const c1 = p2.querySelector("#c3");
+  c1.style.backgroundColor = "red"
+  */
+
+
+  const p2 = document.querySelector("#parent2");
+  const c3 = p2.querySelector("#c3");
+  const c4 = c3.nextElementSibling;
+  c4.style.backgroundColor = "red";
+  c4.previousElementSibling.style.backgroundColor = "gold"
+
+  c3.parentNode.style.backgroundColor = "grey"
+  c4.parentNode.style.backgroundColor = "darkblue"
+
+
+  console.log(c4.closest(".parent").style.backgroundColor = "darkgreen")
+
+  console.log(c4.closest(".gparent").style.backgroundColor = "darkgrey")
+
+</script>
+</html>
+

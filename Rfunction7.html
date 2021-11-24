@@ -1,0 +1,72 @@
+<!---
+<script>
+function fun_one(arg1,...arg2){
+    console.log(arg1,arg2);
+};
+fun_one();
+fun_one("hello");
+fun_one("hello_1","hello_2","hello_3");
+fun_one(null,null,undefined);
+fun_one(null,null);
+fun_one(undefined);
+</script>
+-->
+<!--
+<script>
+    function fun_two(...arg1){
+        console.log(arg1);
+    };
+    fun_two(); //[]
+    fun_two("hello",null);//(2) ['hello', null]
+    fun_two("hello2"); //['hello2']
+    fun_two(null,undefined);//(2) [null, undefined]
+</script>
+-->
+
+<!---
+<script>
+   function fun_three(arg1,...arg2){
+       console.log(arg1,arg2);
+
+   };
+
+   fun_three(null);//null []
+   fun_three(null, undefined,undefined);//null (2) [undefined, undefined]
+   fun_three(null,null);//null [null]
+   fun_three("hi","hi,","hi");//hi (2) ['hi,', 'hi']
+
+</script>
+-->
+
+<!--
+<script>
+    function fun_nithish(arg1,...arg2,...arg3){ // spread operator will be only one per function..........
+        console.log(arg1,arg2,arg3);
+    };
+    fun_nithish();                      //Rfunction7.html:43 Uncaught SyntaxError: Rest parameter must be last formal parameter
+</script>
+-->
+
+<!---
+<script>
+    function fun_1455(...arg1,arg2){   //Uncaught SyntaxError: Rest parameter must be last formal parameter
+       console.log(arg1,arg2); // spread opreator should be always in last position....
+    };
+    fun_1455();
+</script>
+-->
+
+
+<script>
+    function fun_0123(arg1,...arg2){
+        console.log(arg1,arg2);
+    }
+    fun_0123();     //undefined [] // if we don't pass anything in normal parameter then it will be by default value is undefined..
+    fun_0123("hi",null);  //hi [null]
+
+</script>
+
+
+
+
+

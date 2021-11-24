@@ -1,0 +1,41 @@
+<!---
+<script>
+    function fun_one(arg1="hello" ,arg2="hi"){
+          console.log(arg1,arg2);
+    }
+    fun_one();            //hello hi
+    fun_one("hi",null);     //hi null
+    fun_one("hello",undefined); //hello hi
+    fun_one("hi",undefined,undefined); //hi hi
+    fun_one(852,"hello");  //852 'hello'
+    fun_one(undefined,"welcome"); //hello welcome
+</script>
+-->
+
+<script>
+function fun_two(arg1="hi",arg2,...arg3){ //Uncaught SyntaxError: Rest parameter may not have a default initializer
+    console.log(arg1,arg2,arg3);
+};
+   
+  fun_two("hi","hi","hi");    //hi hi ['hi']
+  fun_two("hello2",undefined,);//hello2 undefined []
+  fun_two(undefined,'jock',null);//hi jock [null]
+  fun_two();         //
+  fun_two(undefined,undefined,undefined); //hi undefined [undefined]
+  fun_two(null,"hello"); //null 'hello' []
+  fun_two("hello","rohit","kohli","dhoni","ishan");//hello rohit (3) ['kohli', 'dhoni', 'ishan']0: "kohli"1: "dhoni"2: "ishan"length: 3[[Prototype]]: Array(0)
+  fun_two("hello_2","hi",null,undefined,"umal","kamal","jasan","ali","pana","hardik","kunal","sai","mahi");// hello_2 hi (11) [null, undefined, 'umal', 'kamal', 'jasan', 'ali', 'pana', 'hardik', 'kunal', 'sai', 'mahi'
+
+</script>
+
+
+
+<script>
+    function fun_one(arg1="lom",arg2="hasan",arg3="ali",arg4="hello",arg5="komal"){
+       console.log(arg1,arg2,arg3,arg4,arg5);
+    };
+
+    fun_one();        //lom hasan ali hello komal
+    
+</script>
+

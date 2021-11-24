@@ -1,0 +1,515 @@
+<!---
+1) constrcuctor functions is used to create the classes like structures before ES6.
+
+2) In constructor functions(variables and functions) should start with "this" keyword.
+
+3) "this" keyword representing the current class members.
+
+4) we will create the object with the help of "new" keyword.
+
+5) when we create object .in browser memory it will create the some space..
+
+6) we can create number of objects for class...
+
+7) object is representing the class..
+
+8) prototype refering the class..
+
+9) prototype chaining is nothing but linking one class to another class........
+
+-->
+
+
+<!--
+<script>
+    function class_one(){
+        this.var_one="html";
+        this.var_two="css";
+        this.var_three="java";
+    };
+
+    let obj1 = new class_one();
+
+    console.log(obj1.var_one,obj1.var_two,obj1.var_three);  //html css java
+
+</script>
+
+
+
+<script>
+    function class_two(){
+        this.sub_one="c";
+        this.sub_two="c++";
+        this.sub_three="core java";
+    };
+    var obj2 = new class_two();
+
+    console.log(obj2.sub_one,obj2.sub_one,obj2.sub_three);//c c core java
+</script>
+
+
+
+
+
+<script>
+    function fun_one(){
+        this.car_one="bmw";
+        this.car_two="benz";
+        this.car_three="audi";
+    };
+    let obj3 = new fun_one();
+    console.log(obj3.car_one,obj3.car_two,obj3.car_three);//bmw benz audi
+</script>
+
+
+------>
+
+
+<!--
+<script>
+    function fun_two(){
+        this.var_one="hello";
+        this.var_two="hi";
+        this.var_three="hey";
+    };
+
+    let obj1 = new fun_two();
+
+    console.log(obj1.var_one,obj1.var_two,obj1.var_three); //hello hi hey
+
+    
+    let obj2 = new fun_two();
+
+    console.log(obj2.var_one,obj2.var_two,obj2.var_three); //hello hi hey
+
+    
+</script>
+
+---->
+
+<!--
+<script>
+    function fun_three(){
+        this.var_one="welcome";
+        this.var_two="to";
+        this.var_three="java";
+        this.var_four="script";
+        this.var_five="hey";
+        this.var_six="are you";
+        this.var_seven="there !";
+
+    }
+    let obj1 = new fun_three();
+
+    let obj2 = new fun_three();
+
+    console.log(obj1.var_one,obj1.var_two,obj1.var_three,obj1.var_four,obj1.var_five,obj1.var_five,obj1.var_six,obj1.var_seven);//welcome to java script hey hey are you there !
+
+
+    console.log(obj2.var_one,obj2.var_two,obj2.var_three,obj2.var_four,obj2.var_five,obj2.var_six,obj2.var_seven);//welcome to java script hey are you there !
+
+
+</script>
+
+------->
+
+
+<!--
+<script>
+    function fun_one(){
+        this.wish ="hi";
+
+    this.my_fun = function(){
+    
+         return `welcome to ${this.wish}`;
+    };
+
+};
+
+ let obj1 = new fun_one();
+ console.log( obj1.my_fun() );  //welcome to hi
+</script>
+--->
+
+
+
+<!--
+<script>
+    function fun_two(){
+        this.var="java";
+        
+        this.my_fun = function(){
+
+            return `welcome to ${this.var}`;
+        };
+    };
+    
+
+    let obj1 = new fun_two();
+    console.log(obj1.my_fun());  //welcome to java
+
+</script>
+--->
+
+
+<!---
+
+<script>
+    function fun_one(){
+        this.var_one="hello_1";
+
+        this.my_fun = function(){
+          
+            return this.var_one;
+        };
+
+        this.my_two = function(){
+            return this.var_one;
+        };
+
+        this.my_three = function(){
+            return this.var_one;
+        };
+    };
+
+    let obj1 = new fun_one();
+
+    console.log(obj1.my_fun(),obj1.my_two(),obj1.my_three()); //hello_1 hello_1 hello_1
+
+</script>
+
+
+<script>
+    function class_one(){
+        this.var_one="hi_1";
+        this.var_two="hi_2";
+        this.var_three="hi_3";
+
+        this.fun_one = function(){
+         
+            return this.var_one;
+        };
+
+        this.fun_two = function(){
+
+            return this.var_two;
+        };
+
+        this.fun_three = function(){
+
+            return this.var_three;
+        };
+    };
+
+
+
+    let obj2 = new class_one();
+
+    console.log(obj2.fun_one(),obj2.fun_two(),obj2.fun_three()); //hi_1 hi_2 hi_3
+</script>
+
+
+
+<script>
+    function class_two(arg1,arg2,arg3){
+       this.sub_one=arg1;
+       this.sub_two=arg2;
+       this.sub_three=arg3;
+
+    };
+
+    let obj4 = new class_two("hello","hey","bye");
+
+    console.log(obj4.sub_one,obj4.sub_two,obj4.sub_three); //hello hey bye
+  
+
+   let obj5 = new class_two("welcome","to","ashokit");
+
+   console.log(obj5.sub_one,obj5.sub_two,obj5.sub_three); //welcome to ashokit
+
+</script>
+
+
+
+
+
+<script>
+    function class_six(arg1,arg2,arg3,arg4,arg5){
+        this.add_one=arg1;
+        this.add_two=arg2;
+        this.add_three=arg3;
+        this.add_four=arg4;
+        this.add_five=arg5;
+    };
+
+    let obj9 = new class_six("iam","nithish","kumar","from","india");
+    console.log(obj9.add_one,obj9.add_two,obj9.add_three,obj9.add_four,obj9.add_five); //iam nithish kumar from india
+
+</script>
+
+----->
+
+<!---
+<script>
+    function class_one(){
+
+    };
+    class_one.prototype.sub_one = "hello javascript";
+    let obj1 = new class_one();
+    console.log(obj1.sub_one);  //hello javascript
+
+</script>
+
+
+
+<script>
+    function class_two(){
+
+    };
+
+    class_two.prototype.sub_two ="bye javascript";
+    let obj2 = new class_two();
+    console.log(obj2.sub_two); //bye javascript
+
+</script>
+----->
+
+<!---
+<script>
+    function class_one(){
+
+    };
+
+    class_one.prototype.sub_one = "hey";
+    class_one.prototype.fun_one = function(){
+           return "hello how are u";
+    };
+
+    let obj1 = new class_one();
+
+    console.log(obj1.sub_one,obj1.fun_one()); //hey hello how are u
+  
+    let obj2 = new class_one();
+
+    console.log(obj2.fun_one(),obj2.sub_one); // hello how are u hey
+
+</script>
+---->
+
+
+
+<!---
+<script>
+    function class_one(){
+
+    };
+
+
+     class_one.prototype.var_one = "hello_1";
+    function class_two(){
+
+    };
+    class_two.prototype = Object.create(class_one.prototype);
+
+    class_two.prototype.var_two = "hello_2";
+
+    let obj1 = new class_two();
+
+    console.log(obj1.var_one,obj1.var_two); //hello_1 hello_2
+
+
+</script>
+
+
+
+<script>
+    function class_three(){
+
+    };
+
+    function class_four(){
+
+    };
+
+    class_three.prototype.sub_one = "hey_1";
+
+      class_four.prototype = Object.create(class_three.prototype);
+      class_four.prototype.sub_two = "hey_2";
+     
+      let obj2 = new class_four();
+
+      console.log(obj2.sub_one,obj2.sub_two); //hey_1 hey_2
+
+</script>
+------->
+
+
+
+
+<!--
+<script>
+
+function class_one(){}
+   
+   class_one.prototype.fun_one = function(){
+       return "hello_1";
+   }
+  
+ function class_two(){}
+ class_two.prototype = Object.create(class_one.prototype);
+ class_two.prototype.fun_two = function(){
+      return "hello_2";
+ }
+
+ function class_three(){}
+ class_three.prototype = Object.create(class_two.prototype);
+ class_three.prototype.fun_three = function(){
+     return "hello_3";
+ }
+ 
+  let obj1 = new class_one();
+
+  console.log(obj1.fun_one()); //hello_1
+
+  let obj2 = new class_two();
+
+  console.log(obj2.fun_one(),obj2.fun_two()); //hello_1 hello_2
+
+  let obj3 = new class_three();
+
+  console.log(obj3.fun_one(),obj3.fun_two(),obj3.fun_three()); //hello_1 hello_2 hello_3
+
+</script>
+---->
+
+
+
+
+
+<!--
+<script>
+    function class_four(){}
+    class_four.prototype.fun_one = function(){
+        return "hi_1";
+    }
+
+   let obj1 = new class_four();
+
+   console.log(obj1.fun_one()); //hi_1
+
+
+
+   function class_five(){}
+   class_five.prototype = Object.create(class_four.prototype);
+   class_five.prototype.fun_two = function(){
+       return "hi_2";
+   }
+  
+
+
+   let obj2 = new class_five();
+   console.log(obj2.fun_one(),obj2.fun_two()); //hi_1 hi_2
+
+   
+   function class_six(){}
+   class_six.prototype = Object.create(class_five.prototype);
+   class_six.prototype.fun_three = function(){
+       return "hi_3";
+   }
+
+   let obj3 = new class_six();
+
+   console.log(obj3.fun_one(),obj3.fun_two(),obj3.fun_three());  //hi_1 hi_2 hi_3
+
+</script>
+
+------>
+
+<!--
+<script>
+    function class_one(){
+
+    };
+
+    class_one.prototype.db_one = function(){
+        return "oracle database soon..!";
+    };
+
+    function class_two(){
+
+    };
+     class_two.prototype = Object.create(class_one.prototype);
+    class_two.prototype.db_one = function(){
+
+        return "MonogoDB will come soon.....!";
+    };
+
+    let obj = new class_two();
+    console.log(obj.db_one()); //MonogoDB will come soon.....!
+
+</script>
+
+---->
+
+
+
+
+
+<!--
+<script>
+    function class_one(){
+
+    };
+
+    class_one.prototype.db_one = function(){
+        return "hello db_1";
+    };
+
+    function class_two(){
+        
+    };
+    class_two.prototype = Object.create(class_one.prototype);
+    class_two.prototype.db_one = function(){
+        return "hello db_2";
+    };
+
+  let obj = new class_one();
+  console.log(obj.db_one()); //hello db_1 //if we want fun_one() output specifically  then we should have to create object for that..
+ 
+   
+
+  let obj1 = new class_two();
+
+  console.log(obj1.db_one());//hello db_2
+
+</script>
+------->
+
+
+
+<!--
+<script>
+    function class_one(){
+
+    };
+    class_one.prototype.db_one = function(){
+        return "hello db_one";
+    };
+
+    function class_two(){
+
+    };
+    class_two.prototype = Object.create(class_one.prototype);
+    class_two.prototype.db_two = function(){
+        return "hello db_two";
+    };
+
+    let obj1 = new class_two();
+    console.log(obj1.db_two(),obj1.db_one()); //hello db_two //hello db_two hello db_one
+
+
+</script>
+
+---------->
+
+

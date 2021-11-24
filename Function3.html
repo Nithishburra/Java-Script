@@ -1,0 +1,37 @@
+<!---
+<script>
+    let arr=[];
+ function fun_one(){
+     return "hello";
+ }
+
+ for(let i=0;i<5;i++){
+
+    arr.push(fun_one());
+ }
+
+ for(let j=0;j<arr.length;j++){
+     console.log(arr[j]);
+ }
+</script>
+-->
+
+<script>
+    let arr=[];
+ function fun_one(){
+     return "hello";
+ }
+
+ for(let i=0;i<5;i++){
+
+    arr.push(fun_one);
+ }
+
+ for(let j=0;j<arr.length;j++){
+     console.log(arr[j]());
+ }
+</script>
+
+
+
+

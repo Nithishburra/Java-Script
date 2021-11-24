@@ -1,0 +1,43 @@
+<!--
+    Default parameter in functions
+
+    1) it is introduced in ES6 version.
+
+    2) while defining the functions we will assign some default values to the parameter....
+-->
+
+
+
+<!---
+<script>
+    function fun_one(arg1,arg2,arg3){
+        console.log(arg1,arg2,arg3); // if we don't pass anything in parameter then default value will be undefined..
+    };
+        fun_one();              //undefined undefined undefined
+</script>
+-->
+
+
+
+
+<script>
+ function fun_one(arg1="hello",arg2="hello_1",arg3="hello_3"){
+     console.log(arg1,arg2,arg3); 
+
+ };
+
+ fun_one();  //hello hello_1 hello_3  // if we don't pass anything then the default values will be come 
+ fun_one("hi","hi"); // hi hi hello_3       // when ever we insert new data then it replace with old data and new data will come in that place..
+ fun_one(null); //null 'hello_1' 'hello_3'
+ fun_one(123,"hi");//123 'hi' 'hello_3'
+ fun_one("1234"); //1234 hello_1 hello_3
+ fun_one(undefined,undefined,undefined)  //hello hello_1 hello_3 //undefined will never affect the original values
+ fun_one(null,null,null,null);//null null null //null will affect the original values..
+ fun_one(null,undefined); //null 'hello_1' 'hello_3'
+ fun_one("hi",undefined,undefined); //hi hello_1 hello_3
+ fun_one(undefined,null);                //hello null hello_3
+ fun_one("welcome",undefined,undefined);  //welcome hello_1 hello_3
+ fun_one(undefined,"hi",undefined);      //hello hi hello_3
+
+</script>
+

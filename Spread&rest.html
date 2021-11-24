@@ -1,0 +1,134 @@
+<!---
+
+    differences between spread and rest
+    ***********************************
+    1) ...spread
+
+     -> The spread operator allows us to spread the value of an array...
+
+    2) rest
+
+     -> The rest parameter allows us to pass an indefinite number of parameters to a function and access them in an array.
+-->
+
+<!---
+<script>
+ let arr1 = [1,2,3]
+
+ let arr2 = [4,5,6]
+
+ let arr3 = [...arr1,...arr2]
+ console.log(arr3);
+</script>                                        // [1, 2, 3, 4, 5, 6]
+
+
+
+
+<script>
+    let obj1 = {
+        "name":"ASHOKIT",
+        "course":"FULLSTACK",
+        "fee":"150000"
+    }
+
+    let obj2 ={
+          ...obj1,
+          "course":"UI FULLSTACK"
+    }
+
+    console.log(obj1,obj2);
+</script>
+---->
+
+
+
+
+
+<!--
+
+<script>
+    function fun_one(...n){
+        console.log(n);
+    }
+
+    fun_one(10);
+    fun_one(10,20,30,40);
+    fun_one(10,20,30,40,50,60);
+</script>
+
+
+
+<script>
+    function fun_one(arg1,arg2,arg3,...arg4){
+        console.log(arg1,arg2,arg3,...arg4);
+    }
+
+    fun_one(10);
+    fun_one(10,20,30,40);
+    fun_one(10,20,30,40,50,60);
+</script>
+---->
+
+
+
+
+
+<!--
+
+<script>
+   function fun_one(...n){
+       console.log(n)
+   }
+
+   fun_one();                            //[]
+</script>
+
+
+---->
+
+
+
+<!---
+
+<script>
+    function fun_one(){
+        console.log(arguments);
+    }
+    fun_one(10,20,30,40,50);
+
+</script>
+
+    //Arguments(5) [10, 20, 30, 40, 50, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+    
+    // if we don't pass any thing in the function then if we pass arguments keyword in the console then it will call the values..
+    //because arguements is a predefined object in javascript..
+    // it looks like array but that is not actual array ...there is a problem in the javascript in this scenario..
+    // so we have to convert to array manually..
+    // below example says that conversion of actual array...
+
+
+   <script>
+       function fun_one(){
+           console.log(arguments);
+           console.log(Array.prototype.slice.call(arguments,0));
+       }
+
+       fun_one(10,20,30,40,50);                 //[10, 20, 30, 40, 50]
+   </script>
+
+
+   // we can also use this way rest parameter like below...
+
+ <script>
+    function fun_one(...n){
+        console.log(arguments);
+        console.log(n);
+    }
+
+    fun_one(10,20,30,40,50);               // (5) [10, 20, 30, 40, 50]
+ </script>
+
+------>
+
+
+

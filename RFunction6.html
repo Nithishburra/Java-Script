@@ -1,0 +1,29 @@
+<!--
+    Rest parameter in function
+    1) whenever we want more than one values then we have to use this rest parameter in function
+-->
+
+<script>
+function fun_one(...arg1){       // ... means spread operator it will accept more than one value.. Es6 version introduced
+   console.log(arg1)
+};
+fun_one("hello","hello1");   //(2) ['hello', 'hello1']
+fun_one("hi","hi2","hi3");   //(3) ['hi', 'hi2', 'hi3']
+fun_one();                   //[]....///if we dont pass anything then it will be empty array...
+fun_one(undefined);          //[undefined]
+fun_one(null,undefined);     //(2) [null, undefined]
+</script>
+
+
+<script>
+    function fun_two(...arg1){ // we can take only one spread operator for function............
+
+    }
+</script>
+
+<script>
+    function fun_three(arg2,...arg1){ //position of spread  operator always should be last  in occrences...
+
+    }
+</script>
+

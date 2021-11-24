@@ -1,0 +1,34 @@
+<!--
+1) debouncing means when we click the button cancelling the old request and taking the new request is called debouncing..
+
+2) Throttling means is when we click the button cancelling the latest requestes and taking the old first request is called as throttling..
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Throttling</title>
+</head>
+<body>
+    <button id ="my_btn">Click here</button>
+</body>
+<script>
+     const throttling = (fn,delay)=>{
+          let last=0;
+          return(...args)=>{
+            let now = new Date().getTime();
+            if(now-last<delay){
+                return;
+            }
+              last = now;
+              return fn(...args);
+          };
+     };
+
+    document.getElementById("my_btn").addEventListener("click",throttling(event=>{
+          console.log("throttling....!")
+    }),5000)
+</script>
+</html>
+
+

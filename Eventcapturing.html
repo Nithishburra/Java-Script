@@ -1,0 +1,71 @@
+<!--
+    eventcapturing is propagation of events from top to down we can call this as eventCapturing
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+eventCapturing
+</title>
+</head>
+ <style>
+    .parent{
+        width:600px;
+        height:600px;
+        background-color: turquoise;
+        color: black;
+    }
+    .child{
+        width: 500px;
+        height:500px;
+        background-color: chocolate;
+        color: black;
+        margin-left: 50px;
+        margin-top: 25px;
+    }
+    .subchild{
+        width: 400px;
+        height: 400px;
+        background-color: cornflowerblue;
+        margin-left: 50px;
+        margin-top: 25px;
+    }
+</style>
+</head>
+<body>
+<div class="parent">
+ parent
+<div class="child">
+child
+<div class="subchild">
+subchild
+</div>
+</div>
+</div>
+</body>
+
+ <script>
+     document.querySelector(".parent").addEventListener("click",()=>{
+         console.log("parent");
+     },true);
+
+     document.querySelector(".child").addEventListener("click",(event)=>{
+         event.stopPropagation();
+          console.log("child");
+
+    })
+
+     document.querySelector(".subchild").addEventListener("click",()=>{
+            console.log("subchild")
+     });
+
+
+   
+
+ </script>
+
+</html>
+

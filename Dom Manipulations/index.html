@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM Elements</title>
+</head>
+<body>
+   <div>
+       <span id ="sp1" title="hey_1">SPAN1</span>
+
+       <span id ="sp2" title="hey_2">SPAN2</span>
+
+       <spn id = "sp3" title="hey_3">SPAN3</spn>
+   </div>
+</body>
+<script>
+     
+     const div = document.querySelector("div");
+
+     const span1 = document.querySelector("#sp1");
+
+     const span2 = document.querySelector("#sp2");
+
+     const span3 = document.querySelector("#sp3");
+
+       //to remove 
+      //sol_1
+     //span1.remove("#sp1")  
+      
+      //sol_2
+      //div.removeChild(span3);
+      
+
+      //to read the elements
+      //sol_1
+      //console.log(span1.id,span2.title);
+
+       //sol_2
+      //console.log(span2.getAttribute("id"),span2.getAttribute("title"));
+
+
+      //adding the attributes
+      //sol_1
+      //span1.setAttribute("key1","value1");
+      //span2.setAttribute("key2","value2");
+
+    
+      //removing the attribute
+      span1.removeAttribute("id");
+      span1.removeAttribute("title");
+      span2.removeAttribute("id");
+
+
+
+
+   
+</script>
+</html>
+
+

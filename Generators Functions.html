@@ -1,0 +1,199 @@
+<!---
+          Generators
+          ***********
+
+    1) generators is used to control the statements in the Functions.
+
+    2) generators should representing with "*".
+
+    3) each statement should have "yield" statements.
+
+    4) Generators will have Cursor Mechanism.
+
+    5) by using cursor we can control the statements.
+
+    6) false means one more thing is there behind that thing (exceution is not completed)
+
+    7) true means if no thing is avaiable in behind that it is true..(execution is completed)
+
+    8) if any statements avaiable after the return statements then that code will won't executed.
+
+-->
+
+<!--
+<script>
+function * fun_one(){
+    yield "stmt_1";
+    yield "stmt_2";
+    yield "stmt_3";
+    yield "stmt_4";
+    yield "stmt_5";
+    yield "stmt_6";
+};
+
+let cursor = fun_one();
+
+console.log(cursor.next());
+console.log(cursor.next());
+console.log(cursor.next());
+console.log(cursor.next());
+console.log(cursor.next());
+console.log(cursor.next());
+console.log(cursor.next());
+</script>
+------>
+
+<!--
+<script>
+    function  * fun_one(){
+        yield 100;
+        yield 200;
+        return 300;
+        yield 400;
+
+    };
+
+    let cursor = fun_one();
+    console.log(cursor.next() );
+    console.log(cursor.next() );
+    console.log(cursor.next () );
+    console.log(cursor.next() );
+    console.log(cursor.next() );
+</script>
+----->
+
+
+
+<!---
+<script>
+    function * class_two(){
+        
+        yield 100;
+        yield 500;
+        yield 600;
+        yield 100;
+        return 530;
+        yield 800;
+        yield 900;
+    };
+    let cursor = class_two();
+
+    console.log(cursor.next());
+    console.log(cursor.next());
+    console.log(cursor.next());
+    console.log(cursor.next());
+    console.log(cursor.next());
+    console.log(cursor.next());
+    console.log(cursor.next());
+    console.log(cursor.next());
+   
+</script>
+----->
+
+
+<!--
+<script>
+    function * fun_one(){
+        yield "hi";
+        yield "hello";
+        yield "bye";
+        yield  "ok";
+        yield "ok then";
+        yield  "bye";
+    };
+    let cursor = fun_one();
+
+    for(i=1;i<=8;i++){
+        console.log(cursor.next());
+    };
+</script>
+------>
+
+
+
+<!--
+<script>
+    function * fun_one(){
+        yield 100;
+        yield * fun_two();
+        yield * fun_three();
+        yield * fun_four();
+
+    };
+
+    function * fun_two(){
+        yield 200;
+
+    };
+
+    function * fun_three(){
+        yield "hi";
+    };
+
+    function * fun_four(){
+        yield "hello";
+    };
+
+    let cursor = fun_one();
+
+
+    for(i=0;i<6;i++){
+        console.log(cursor.next());
+    }
+</script>
+-------->
+
+<!---
+<script>
+    function * fun_one(){
+        yield 100;
+        yield 10;
+        yield * fun_two();
+        yield * fun_three();
+        yield 1000;
+
+    }
+
+    function * fun_two(){
+        yield "200";
+    };
+
+    function * fun_three(){
+        yield 20;
+
+    };
+    let cursor = fun_one();
+
+    for(i=0;i<6;i++){
+        console.log(cursor.next());
+    }
+</script>
+------>
+
+<!--
+<script>
+    function * fun_one(){
+        yield 100;
+    };
+
+    function * fun_two(){
+        yield 200;
+    };
+
+    function * fun_three(){
+        yield 300;
+        yield * fun_one();
+        yield * fun_two();
+        yield 400;
+    };
+
+    let cursor = fun_three();
+
+    for(i=0;i<6;i++){
+        console.log(cursor.next());
+    }
+</script>
+---->
+
+
+

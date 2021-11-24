@@ -1,0 +1,467 @@
+<!--
+    Closures
+    ********
+1) the function with it's lexical scoping is called as Closures..
+-->
+
+
+<!---
+<script>
+
+    function fun_one(){
+        var x= 500;
+
+        function fun_two(){
+            console.log(x);
+        };
+
+        fun_two();
+    };
+
+    fun_one();
+
+</script>
+
+
+<script>
+    function fun_three(){
+        let msg = "hello";
+
+        function fun_four(){
+            console.log(msg);
+        };
+
+        fun_four();
+    };
+    fun_three();
+</script>
+
+------->
+
+
+
+
+
+<!---
+
+<script>
+    function fun_one(){
+        var x =100;
+
+        function fun_two(){
+            var y = 200;
+        
+
+        function fun_three(){
+            console.log(x);
+            console.log(y);
+        };
+
+        fun_three();
+    }
+       fun_two();
+
+  }
+      fun_one();
+</script>
+
+
+
+
+
+<script>
+    function fun_four(){
+    var T1 = "hello_1";
+
+    function fun_five(){
+    var T2 = "hello_2";
+
+    function fun_six(){
+     var T3 = "hello_3";
+
+    function fun_seven(){
+    var T4 = "hello_4";
+    function fun_eight(){
+    console.log(T1);
+    console.log(T2);
+    console.log(T3,T4);
+    }
+    fun_eight();
+    }
+    fun_seven();
+    }
+    fun_six();
+    }
+    fun_five();
+    }
+    fun_four();
+
+</script>
+
+
+---->
+
+
+
+
+
+
+
+
+
+<!---
+
+
+<script>
+
+  function fun_one(){
+      var x= 20;
+      
+      return function fun_two(){
+          console.log(x);
+    }
+
+  }
+
+    var fun_two = fun_one();
+    fun_two();
+</script>
+
+
+
+
+<script>
+    function parent(){
+        land = 100;
+        return function child(){
+            console.log(land);
+        }
+    }
+    var child= parent();
+    child();
+</script>
+
+
+----->
+
+
+
+
+
+<!---
+<script>
+    function grandparent(){
+        var land = "50acre";
+        var money = "100000"
+
+       var x = function parent(){
+            console.log(land);
+
+            var y= function child(){
+                console.log(money);
+            }
+
+            return y;
+        }
+        return x;
+
+    }
+      
+      var parent = grandparent();
+
+      var child = parent();
+
+      parent();                                          //50acre
+
+      child();                                       //100000
+</script>
+
+
+------>
+
+
+
+
+<!--
+
+<script>
+    function fun_one(){
+        var x = 10;
+        setTimeout(function(){
+            console.log(x);
+        },6200)
+    }
+    fun_one();
+</script>
+
+
+
+
+<script>
+    function fun_two(){
+        var y = 200;
+        setInterval(() => {
+            console.log(y)
+        }, 7000);
+    }
+
+    fun_two();
+</script>
+
+
+
+
+
+<script>
+   function fun_three(){
+       let txt = "hi Iam here...!"
+       setTimeout(function(){
+           console.log(txt);
+       }, 3000);
+   }
+
+   fun_three();
+</script>
+
+----->
+
+
+
+<!---
+<script>
+    for(var i =1; i<=5; i++){
+       setTimeout(() => {
+        console.log(i);
+       }, 4000);
+    }
+</script>
+
+--->
+
+
+<!--
+<script>
+    for(var i =1; i<5; i++){
+       setTimeout(function(){
+        console.log(i);
+       }, i*1000);
+   
+        console.log("hello");
+     
+}
+</script>
+
+--->
+
+
+<!---
+<script>
+    for(var i=1; i<=5; i++){
+        ((i)=>{
+             setTimeout(() => {
+                 console.log(i);
+             },3000);
+        })(i);
+
+        console.log("hello...!")
+    }
+</script>
+
+
+
+
+<script>
+    for(var i=0; i<=3; i++){
+        ((i)=>{
+            setTimeout(() => {
+                console.log(i);
+            },4000);
+        })(i);
+        console.log("hello")
+    }
+</script>
+----->
+
+
+
+
+
+<!---
+
+<script>
+function fun_one(){
+    var x =10;
+
+    function fun_two(){
+        var y = 20;
+        console.log(x);
+
+     function fun_three(){
+         console.log(y);
+     }
+     return fun_three;
+    }
+    return fun_two;
+}
+ 
+let fun_two = fun_one();
+let fun_three = fun_two();
+ fun_three();
+</script>
+
+--->
+
+
+
+
+<!---
+<script>
+    function fun_one(){
+        var x = 100;
+
+      setTimeout(() => {
+          function fun_two(){
+              console.log(x);
+          }
+          fun_two();
+      }, 4000);
+      x=600;
+    }
+    fun_one();
+</script>
+
+------>
+
+
+<!---
+<script>
+    function fun_three(){
+        var y = 500;
+
+        setTimeout(() => {
+            function fun_four(){
+                console.log(y);
+            }
+            fun_four();
+        }, 3000);
+        x=900;
+        console.log(x);
+    }
+    fun_three();
+</script>
+---->
+
+
+
+
+
+
+<!---
+
+<script>
+    function fun_one(){
+         var c = 50;
+       setTimeout(() => {
+           function fun_two(){
+               console.log(c);
+           }
+           fun_two();
+       }, 4000);
+       c=60;
+    }
+    fun_one();                         //60
+</script>
+
+-> in javascript code will execute one by one line..
+
+-> So, first var c=50 excuted in the browser memory..
+
+-> then settimeout will store the function defn until 5seconds..
+
+-> So, the next line will execute the browser memory ...then again it go back to function defn then it will take the latest x value ..
+
+-> the previous value will be not considered as brower memory..
+
+-> So, thats why out put will be 60...
+
+-->
+
+
+
+
+<!---
+<script>
+    for(var i=0; i<5; i++){
+        console.log(i);
+    }
+
+    console.log(i);
+</script>
+
+----->
+
+<!---
+<script>
+   for(var i =0;i<5;i++){
+       ((i)=>{
+           setTimeout(()=>{
+               console.log(i);
+           },5000)
+       })(i)
+   }
+</script>
+
+---->
+
+
+<!---
+<script>
+    function fun_one(){
+        var x = 100;
+        function fun_two(){
+            console.log(x);
+        }
+        x=200;
+        fun_two();
+    }
+    fun_one();                         //200
+</script>
+
+
+
+
+
+
+<script>
+    function fun_one(){
+        var x = 100;
+        function fun_two(){
+            console.log(x);
+        }
+        
+        fun_two();
+        x=200;
+    }
+    fun_one();                         //100
+</script>
+
+
+----->
+
+<!---
+<script>
+    function fun_one(){
+        var x = 200;
+        function fun_two(){
+            console.log(x);
+        }
+        x=100;
+        return fun_two;
+       
+    }
+    fun_one()();
+</script>                                    //200
+
+------>
+
+

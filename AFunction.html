@@ -1,0 +1,133 @@
+<!--
+    Arrow functions
+    *****************
+    1) the function without name is called anonymous functions
+
+    2) anonymous function is also called as arrow functions
+
+    3) arrow functions behave like call back functions.
+    
+    4) we will represent arrow functions with =>
+
+    5) arrow functions introduced in ES6 version
+
+
+    syntax
+    *******
+    1) function defintion
+
+    2) function calling
+
+
+    var/let/const variable name =(arg1,arg2,arg3.........argn)=>{
+        //business logic
+    }
+     
+    variablename(param1,param2,param3.........paramn);
+     
+
+-->
+
+
+<!---
+<script> 
+  let fun_one=()=>{
+      return"welcome"                      
+  }
+  console.log(fun_one);  //function defn ()=>{
+                                // return"welcome"
+                                    //}
+  console.log(fun_one()); //hello
+</script>
+-->
+
+
+<!---
+<script>
+    let fun_two=()=> console.log("hello");////if we have only one line of code then curly brackets are optional
+     
+     fun_two();     //hello
+
+</script>
+-->
+
+
+<!--
+<script>
+    let fun_three=(arg1,arg2,arg3)=>{
+         console.log(arg1,arg2,arg3);
+    }
+
+    fun_three("hello","hi","iam"); //hello hi iam
+    fun_three(null,null,null); //null null null
+    fun_three("hey");       //hey undefined undefined
+    fun_three();           //undefined undefined undefined
+</script>
+-->
+
+
+
+
+<!---
+<script>
+    let fun_one=(arg1,arg2,arg3)=>{
+        console.log(arg1(),arg2(),arg3());
+    };
+
+    fun_one( ()=>{
+         return"hello_1";
+    }, ()=>{
+       return"hello_2";
+    },()=>{
+        return"hello3";
+    } );                               //hello_1 hello_2 hello3
+</script>
+--->
+
+<!---
+<script>
+    let initialize=(user,getelementbyemail,getelementbyid)=>{
+              console.log(user,getelementbyemail(),getelementbyid());
+
+    };
+    let getelementbyemail=()=>{
+        return"ashokit@gmail.com";
+    }
+    let getelementbyid=()=>{                                           
+        return"ashok_123";
+    };                                                              
+
+     initialize("hello_1",getelementbyemail,getelementbyid); //hello_1 ashokit@gmail.com ashok_123
+   
+</script>
+--->
+
+
+
+
+
+<script>
+let user =(user1,user2,user3)=>{
+    console.log(user1,user2,user3);
+};
+
+ let user1=()=>{
+     return"sai";
+ }
+
+ let user2=()=>{
+     return"nithin";
+ }
+
+ let user3=()=>{
+     return"kumar";
+ };
+
+  user(user1(),user2(),user3()); //hello_1 ashokit@gmail.com ashok_123
+
+</script>
+
+
+
+
+

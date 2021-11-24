@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body></body>
+<script>
+    $.ajax({
+        method:"POST",
+        url:"http://test-routes.herokuapp.com/test/uppercase",
+        data:{"message":"welcome to js"},
+        success:(PosRes)=>{
+            console.log(PosRes);
+        },
+
+        error:(errRes)=>{
+            console.log(errRes);
+        },
+
+    });
+</script>
+</html>

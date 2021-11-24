@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM</title>
+<style>
+    .gparent{
+        width:500px;
+        height: 500px;
+        background-color: coral;
+    }
+    .parent{
+        width:480px;
+        height:200px;
+        margin: 20px 10px;
+       background-color: cornflowerblue;
+         display: flex;
+    }
+
+    .child{
+        width:190px;
+        height:150px;
+        margin:20px;
+        background-color: darkgoldenrod;
+    }
+</style>
+</head>
+<body>
+    <div class ="gparent" id="gparent">
+       <div class ="parent" id="parent1">
+         <div class ="child" id="c1"></div>
+         <div class ="child" id="c2"></div>
+       </div>
+
+        <div class="parent" id="parent2">
+        <div class="child" id="c3"></div>
+        <div class="child" id="c4"></div>
+        </div> 
+
+    </div>
+</body>
+<script>
+   
+   document.getElementById("gparent").style.backgroundColor = "black"
+
+   const p1 = document.querySelectorAll(".parent")[0];
+   p1.style.backgroundColor = "brown"
+   const childrens = p1.children;
+   const c1 = childrens[0];
+   c1.style.backgroundColor = "red"
+   c1.nextElementSibling.style.backgroundColor = "pink"
+
+
+
+   const p2 = document.querySelector("#parent2");
+   const c4 = p2.querySelector("#c4");
+   c4.previousElementSibling.style.backgroundColor = "green";
+
+   c4.closest("#parent2").style.backgroundColor  = "aqua";
+
+
+   c4.previousElementSibling.closest(".gparent").style.backgroundColor = "yellow";
+
+
+</script>
+</html>

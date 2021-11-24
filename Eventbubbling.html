@@ -1,0 +1,80 @@
+<!--
+
+
+Eventbubbling
+************
+
+1) propagation of events from down to top is called as Event bubbling...
+
+2) we can stop the propagation by using the event.stopPropagation().
+
+ down to top order
+ *******************
+ 1) if i click the sub child then
+ // subchild
+ //child
+ //parent
+
+ 2) if i click the child then 
+ //child
+ //parent
+
+ 3)if i click the parent then
+ //parent
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Eventbubbling</title>
+<style>
+.parent{
+    width:400px;
+    height: 400px;
+    background-color: salmon;
+    color: black;
+}
+
+ .child{
+     width: 300px;
+     height: 300px;
+     background-color: cadetblue;
+     color: black;
+     margin-left: 50px;
+     margin-top: 25px;
+ }
+ .subchild{
+     width:200px;
+     height:200px;
+     background-color: yellow;
+     color: black;
+     margin-left: 40px;
+     margin-top: 20px;
+ }
+</style>
+</head>
+<body>
+<div class="parent">
+parent
+<div class="child">
+child
+<div class="subchild">
+Subchild
+</div>
+</div>
+</div>
+</body>
+<script>
+    
+    document.querySelector(".subchild").addEventListener("click",()=>{
+        console.log("subchild");
+    });
+    document.querySelector(".child").addEventListener("click",()=>{
+        console.log("child");
+    })
+    document.querySelector(".parent").addEventListener("click",()=>{
+        console.log("parent");
+    });
+</script>
+</html>
+

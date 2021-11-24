@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <h2 data-text1 ="hi_1"
+        data-text2 ="hi_2"
+        data-text3 ="hi_3">HELLO</h2>
+   
+    <h3 data-text4 ="hello_1"
+        data-text5 ="hello_2">WELCOME</h3>
+
+    <script>
+        const h2 =document.querySelector("h2")
+        const h3 = document.querySelector("h3")
+
+        console.log(
+            h2.dataset.text1,
+            h2.dataset.text2,
+            h2.dataset.text3,
+            h3.dataset.text4,
+            h3.dataset.text5
+        );
+
+        h3.dataset.text6 = "welome";
+        h3.dataset.text7 = "hey"
+    </script>
+</html>
+

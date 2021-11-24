@@ -1,0 +1,20 @@
+<script>
+
+   function fun_one(){
+       return fun_two;
+   }
+   function fun_two(){
+       return "hello";
+   }
+
+   console.log(fun_one()());    //hello
+   console.log(fun_one);   /*ƒ fun_one(){
+                            return fun_two;
+                             }*/
+   console.log(fun_one());  /*ƒ fun_two(){
+                           return "hello";
+                             }*/
+
+ console.log(fun_two()); //hello
+ console.log(fun_two);  // it will give fun_two definition....
+</script>

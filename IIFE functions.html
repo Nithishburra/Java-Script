@@ -1,0 +1,187 @@
+<!--
+    IIFE FUNCTIONS
+    **************
+    1) Immdiaite Invokable function Expression.
+
+    2) it is Introduced in ES9 version.
+
+    3) we can define function in two ways 
+
+     function defintion
+     function calling
+
+     4) IN IIFE whenever we write the function defintion then no need to call the function..IIFE will be automatically call the function. 
+
+     5) These functions are called as self invokable functions...
+
+     syntax
+     ******
+    ( (arg1,arg2,arg3.......argn)=>{
+       //business logic
+    })(param1,param2,param3,....param n);
+-->
+
+
+<!---
+<script>
+    (()=>{
+      console.log("welcome to IIFE"); //welcome to IIFE
+
+    })();
+</script>
+
+
+<script>
+    (()=>{
+        console.log("hello world");
+    })(); //hello world
+</script>
+
+
+<script>
+    (()=>{
+        console.log(null);
+    })();         //null
+</script>
+
+
+<script>
+    (()=>{
+        console.log(undefined,"hi");
+    })(); //undefined //undefined 'hi'
+</script>
+
+-->
+
+<!---
+<script>
+   let i= (()=>{      // if we want store the data then we have to follow this
+        return "hi";
+    })();
+    console.log(i);  //hi
+
+</script>
+
+
+<script>
+    let msg=(()=>{
+        return "welcome to this world";
+    })();
+    console.log(msg);  //welcome to this world
+</script>
+-->
+
+
+
+<!--
+<script>
+   function fun_one(arg1,arg2,arg3){
+            console.log(arg1,arg2,arg3);
+   };
+
+    
+    fun_one( (()=>{return "hello"})(),
+           (()=>{return "hi"})(),
+           (()=>{return "hey"})(),
+           );
+                                        //hello hi hey
+</script>
+
+
+
+<script>
+    function fun_two(username,userpwd,userid){
+        console.log(username,userpwd,userid);
+    };
+
+    fun_two( (()=>{return "nithish"})(),
+            
+            (()=>{return "hash12"})(),
+
+            (()=>{ return "1234"})(),     //nithish hash12 1234
+    );
+</script>
+-->
+
+
+<!---
+<script>
+    ((arg1,arg2,arg3)=>{
+         
+        console.log(arg1,arg2,arg3);
+    })("hello_1","hello_2","hello_3");  //hello_1 hello_2 hello_3
+
+</script>
+
+
+<script>
+    ((a1,a2,a3)=>{
+        console.log(a1,a2,a3);
+    })("hi","hi","hi"); //hi hi hi
+
+</script>
+
+---->
+
+
+
+
+<!---
+<script>
+    for(let i=0;i<6;i++){
+        setTimeout(function(){         //this is the before introducing ES6version.
+             console.log("hello");
+        },4000);
+    }
+</script>
+
+
+
+
+<script>
+    for(let i=0;i<5;i++){
+      setTimeout(()=>{               //after introducing ES6 then this call back function will be using
+           console.log(i);
+      },5000);
+    }
+</script>
+
+------>
+
+
+
+
+
+
+
+<!---
+<script>
+    for(var i=0;i<10;i++){          //instead of these var keyword 
+
+       ((i)=>{ setTimeout(()=>{      // we are using the IIFE function
+            console.log(i);
+        },5000)
+
+    })(i);
+    }
+</script>
+
+--->
+
+<script>
+    for(let i=0;i<4;i++){
+
+        setTimeout(()=>{
+            console.log(i);
+        },6000);
+    }
+</script>
+
+
+
+
+
+
+
+
+
