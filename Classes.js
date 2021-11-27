@@ -122,3 +122,8 @@ console.log(
     obj6.sub_three
 );
                                         //hello_1 hello_2 hello_3
+
+console.log(1<2<3<4<5);
+
+
+

@@ -1,0 +1,262 @@
+<!---
+<script>
+    let obj ={
+        "key1" : "hello_1",
+          123  : "hello_2",
+    }
+    console.log(obj.key1);
+    console.log(obj[123]);
+
+</script>
+
+
+<script>
+    let obj1 = {
+        "key1" : "value1",
+        "key2" : "value2",
+         456   : "value3"
+    }
+    console.log(obj1.key1,obj1.key2,obj1[456]);       //value1 value2 value3
+</script>
+
+
+
+<script>
+    let obj2 = {
+        "key1" : "value1",
+        102030 : "HEY"
+    }
+
+    console.log(obj2.key1,obj2[102030]);      //value1 HEY
+</script>
+----->
+
+
+
+<!---
+<script>
+    let obj = {
+        1 :"HELLO_1",
+        2 : "HELLO_2",
+        3 : "HELLO_3"
+    }
+
+    console.log(obj[1],obj[2],obj[3]);       //HELLO_1 HELLO_2 HELLO_3
+</script>
+--->
+
+
+
+<!--
+<script>
+    let obj = {}
+
+    let key1 = {};
+    let value1 = "HELLO_2";
+    obj[key1] = value1;
+  
+     let key2 = {};
+     let value2 = "Hello_3";
+     obj[key2] = value2;
+
+     console.log(obj);                      //{[object Object]: 'Hello_3'}
+
+</script>
+
+
+
+<script>
+    let obj1 = {}
+
+    let key3 = {};
+    let value3 = "HELLO_4";
+    obj1[key3]=value3;
+
+
+    let key4 = {};
+    let value4 = "HELLO_5";
+    obj1[key4] = value4;
+
+    console.log(obj1);           //{[object Object]: 'HELLO_5'}
+</script>
+
+
+--->
+
+
+<!---
+<script>
+    let obj = {
+        "key1" : "value1",
+        "key1" : "value2",
+
+    }
+    console.log(obj);                                //{key1: 'value2'}
+
+</script>
+
+
+<script>
+    let sub = {
+        "key1" : "hello_1",
+        "key1" : "hello_2",
+    }
+    console.log(sub);                            //{key1: 'hello_2'}
+
+</script>
+
+
+<script>
+    let obj1 = {
+        "key1" : "hello_1",
+        "key2" : "hello_1"
+    }
+    console.log(obj1);                             //{key1: 'hello_1', key2: 'hello_1'}
+</script>
+---->
+
+
+<!--
+<script>
+    let obj = {
+        "key1" : "hello_1",
+        "key1" : "hello_1"
+    }
+    console.log(obj);            //{key1: 'hello_1'}
+</script>
+---->
+
+
+
+
+<!---
+<script>
+    let obj = {
+        "key1" : "hello_1",
+        "key2" : "hello_2",
+        "key3" : "hello_3"
+    }
+
+    console.log(obj.key1,obj.key2,obj.key3);       //hello_1 hello_2 hello_3
+    console.log(obj["key1"],obj["key2"],obj["key3"]);
+    const {key1,key2,key3}=obj
+    console.log(key1,key2,key3);
+
+    for(let key in obj){
+        console.log(obj[key]);
+    }
+
+</script>
+
+--->
+
+
+<!--
+<script>
+    let obj1 = {
+        "key1" : "value1",
+        "key2" : "value2",
+        "key3" : "value3"
+    }
+
+    console.log(obj1.key1,obj1.key2,obj1.key3);
+    console.log(obj1["key1"],obj1['key2'],obj1["key3"]);
+    const {key1,key2,key3} = obj1
+    console.log(key1,key2,key3);
+
+    for(let key in obj1){
+        console.log(obj1[key])                 //value1 value2 value3
+    }
+</script>
+---->
+
+
+
+<!---
+//destructuring
+// it is the process of unpacking a small part of something from the main part,
+// it is possible to extract a specific part from the main body.
+// so it can be modified easily as needed 
+
+<script>
+    let obj = {
+        "money" : {"amount":1000},
+        "gold"  : {"weight" : "1gr"},
+        "book"  : {"company": "classmate"},
+        "pen"   : {"company1": "reynolds"}
+
+    }
+
+    let {money,gold,book,pen} = obj
+     let {amount} = money;
+     let {weight} = gold;
+     let {company} = book;
+     let {company1} = pen;
+     console.log(amount,weight,company,company1);     //1000 '1gr' 'classmate' 'reynolds'
+</script>
+
+
+<script>
+    let obj1 = {
+        "course" : {"java":2000},
+        "books"   : {"all" :10},
+        "laptop"  : {"machine":4000},
+        "inst" : {"ashokit" : "javafullstack"}
+
+    }
+
+    let {course,books,laptop,inst} = obj1
+      let {java} = course;
+      let {all} = books;
+      let {machine} = laptop;
+      let {ashokit} = inst;
+      console.log(java,all,machine,ashokit);           //2000 10 4000 'javafullstack'
+</script>
+
+----->
+
+
+
+
+
+
+<script>
+    let arr = [
+        {"e_id":111,"e_name":"e_one","e_sal":1000},
+        {"e_id":222,"e_name":"e_two","e_sal":2000},
+        {"e_id":333,"e_name":"e_three","e_sal":3000},
+        {"e_id":444,"e_name":"e_four","e_sal":4000},
+        {"e_id":555,"e_name":"e_five","e_sal":5000}
+        
+
+    ]
+
+    document.write(`<table border="1"
+                       cellpadding = "10px"
+                       cellspacing = "10px"
+                       align = "center">
+
+                       <tr>
+                        <th>E_ID</th>
+                        <th>E_NAME</th>
+                        <th>E_SAL</th>
+                      </tr>
+
+    ` );
+
+       arr.forEach((rec)=>{
+           document.write(`
+
+             <tr>
+                <td>${rec.e_id}</td>
+                <td>${rec.e_name}</td>
+                <td>${rec.e_sal}</td>
+
+            </tr>
+   `);
+       });
+
+       document.write(`</table>`);
+</script>
+
+

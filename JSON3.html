@@ -1,0 +1,82 @@
+<!--
+<script>
+    let arr = [
+        {"e_id":1,"e_name":"sai","e_sal":20000},
+        {"e_id":2,"e_name":"nithin","e_sal":40000},
+        {"e_id":3,"e_name":"kranthi","e_sal":50000},
+        {"e_id":4,"e_name":"saikiran","e_sal":60000},
+        {"e_id":5,"e_name":"kiran","e_sal":70000}
+    ]
+
+    document.write(`<table border = "1"
+                     cellpadding = "10px";
+                     cellspacing = "10px";
+                     align =center>
+
+                    <tr>
+
+                        <th>E_ID</th>
+                        <th>E_NAME</th>
+                        <th>E_SAL</th>
+
+                    </tr>
+    `);
+
+
+    arr.forEach((rec)=>{
+        document.write(`
+             
+                <tr>
+                    <td>${rec.e_id}</td>
+                    <td>${rec.e_name}</td>
+                    <td>${rec.e_sal}</td>
+                </tr>
+
+
+
+        `);
+    });
+
+    document.write(`</table>`);
+</script>
+---->
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+   let products = [
+       {name:"shirt1","cost":100,image:"https://mernclassbucket.s3.us-east-2.amazonaws.com/p1.jpg"},
+       {name:"shirt2","cost":200,image:"https://mernclassbucket.s3.us-east-2.amazonaws.com/p2.jpg"},
+       {name:"shirt3","cost":300,image:"https://mernclassbucket.s3.us-east-2.amazonaws.com/p3.jpg"},
+       {name:"pant1","cost":400,image:"https://mernclassbucket.s3.us-east-2.amazonaws.com/p4.jpg"},
+       {name:"pant2","cost":500,image:"https://mernclassbucket.s3.us-east-2.amazonaws.com/p5.jpg"},
+       {name:"pant3","cost":600,image:"https://mernclassbucket.s3.us-east-2.amazonaws.com/p6.jpg"}
+   ];
+   document.write(`
+        <table border="1"
+               cellpadding="10px"
+               cellspacing="10px"
+               align="center">
+            <tr>
+                <th>Name</th>
+                <th>Cost</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+   `);
+   products.forEach((record)=>{
+        document.write(`
+            <tr>
+                <td>${record.name}</td>
+                <td>${record.cost}</td>
+                <td><img width="20px" src=${record.image}></td>
+                <td><i class="fa fa-trash-o"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-edit"></td
+            </tr>
+        `);
+   });
+</script>
+
+

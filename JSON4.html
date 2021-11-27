@@ -1,0 +1,320 @@
+
+<!--
+    1) JSON.stringfy()---obj --string.
+
+    2) JSON.parse()-----string---obj
+-->
+
+
+
+<!---
+<script>
+    let obj = {"key1":"hello_1"};
+    console.log(typeof obj);                 //object
+
+     let str = JSON.stringify(obj);
+     console.log(typeof str);              //string
+</script>
+
+
+
+
+<script>
+    let obj1 = {"key2":"hello_2"};
+    console.log(typeof obj1);                 //object
+
+   let str1 = JSON.stringify(obj);
+   console.log(typeof str1);                 //string
+</script>
+------>
+
+
+
+<!---
+<script>
+    let obj = {"key_1":"value_1"};
+    console.log(typeof obj);              //object
+    let str = JSON.stringify(obj);
+    console.log(typeof str);              //string
+
+  let obj1 = JSON.parse(str);
+  console.log(typeof obj1);           //object
+</script>
+--->
+
+
+<!---
+<script>
+   let obj = {"key2":"value_2"};
+   console.log(typeof obj);
+   let str = JSON.stringify(obj)
+   console.log(typeof str);
+
+   let obj1 =JSON.parse(str);
+   console.log(typeof obj1);
+</script>
+---->
+
+
+
+
+
+<!---
+<script>
+let obj = {
+    "key1":"value1",
+    "key2":"value2",
+    "key3":"value3",
+    "key4":"value4"
+}
+console.log(obj.hasOwnProperty("key1")); //true
+console.log(obj.hasOwnProperty("key2")); //true
+console.log(obj.hasOwnProperty("key3")); //true
+console.log(obj.hasOwnProperty("key4")); //true
+console.log(obj.hasOwnProperty("key5")); //false
+</script>
+
+
+
+
+
+<script>
+    let obj1 = {
+        "key1":"value1",
+        "key1":"value2"
+    }
+console.log(obj1.hasOwnProperty("key1")); //true
+
+console.log(obj1.hasOwnProperty("key1")); //true
+</script>
+--->
+
+
+
+<!---
+<script>
+let obj = {
+    "key1":"hello_1"
+}
+ console.log(Object.keys(obj)); //['key1']
+
+  
+ console.log(Object.values(obj));  //['hello_1']
+
+</script>
+-->
+
+
+<!---
+<script>
+    let obj1 = {
+        "key2" : "hello_2"
+    }
+  Object.keys(obj1).length == 0 ? console.log("empty"):console.log("not empty");//not empty
+  Object.values(obj1).length == 0 ? console.log("empty"):console.log("not empty");//not empty
+</script>
+
+
+<script>
+    let obj2 = {
+        "key3" : "hello_3"
+    }
+    Object.keys(obj2).length == 0 ? console.log("it is empty"):console.log("it is not empty");//it is not empty
+    Object.values(obj2).length == 0 ? console.log("it is empty"):console.log("it is not empty");//it is not empty
+</script>
+---->
+
+
+
+
+
+
+
+
+
+
+<!---
+    ENTRIES
+    ******
+    => to convert obj to array we have to use entries()
+
+
+<script>
+    let obj = {
+        "key1":"value1",
+        "key2":"value2",
+        "key3":"value3"
+    }
+    console.log(Object.entries(obj));  //(3) [Array(2), Array(2), Array(2)]
+</script>
+
+
+
+<script>
+    let obj1 = {
+        "key1":"hello_1",
+        "key2":"hello_2",
+        "key3":"hello_3"
+    }
+    console.log(Object.entries(obj1)); //(3) [Array(2), Array(2), Array(2)]
+</script>
+
+
+
+<script>
+
+ let obj2 = {
+     "key1":"hello_1",
+     "key2":"hello_2"
+ }
+
+ let arr = Object.entries(obj2);
+ console.log(arr);
+</script>
+
+
+--->
+
+
+
+
+
+<!---
+//concatenation old approach
+<script>
+    let obj1 = {"key1": "hello_1"}
+    let obj2 = {"key2": "hello_2"}
+    let obj3 =  {"key3":"hello_3"}
+   console.log(Object.assign(obj1,obj2,obj3));//{key1: 'hello_1', key2: 'hello_2', key3: 'hello_3'}
+</script>
+
+
+
+<script>
+    let obj4 = {"sub_one":"angular"};
+    let obj5 = {"sub_two":"javascript"};
+    let obj6 = {"sub_three":"Reactjs"};
+    console.log(Object.assign(obj4,obj5,obj6));//{sub_one: 'angular', sub_two: 'javascript', sub_three: 'Reactjs'}
+</script>
+----->
+
+
+
+
+<!--
+
+<script>
+    let arr = [10,20,30,40,50,60];
+
+    console.log(
+        arr.filter((element)=>{
+            return element>=40                    //(3) [40, 50, 60]
+        })
+    );
+
+</script>
+
+
+
+<script>
+    let arr1 = [20,30,40,50];
+    console.log(
+        arr1.filter((element)=>{
+            return element<30
+        })
+    );                                              //[20]
+</script>
+
+
+<script>
+    let arr2 = [100,200,300,400,500]
+    console.log(
+        arr2.filter((element)=>{
+            return element>=100
+        })                                  //(5) [100, 200, 300, 400, 500]
+    );
+</script>
+------>
+
+
+
+<!---
+
+<script>
+    let arr = [100,20,30,400]
+    console.log(
+        arr.filter((element)=>{
+            return element<400
+        })                               //(3) [100, 20, 30]
+    );
+</script>
+----->
+
+
+
+<!---
+<script>
+    let arr = [
+          {"price":100},
+          {"price":200},
+          {"price":300},
+          {"price":400},
+          {"price":500},
+          {"price":600}
+    ]
+
+    console.log(
+        arr.filter((element)=>{
+            return element.price>=300
+        })
+    );
+</script>
+---->
+
+
+
+<!---
+<script>
+
+    let key1 = "hello_1";
+    let key2 = "hello_2";
+
+    let obj = {
+        key1,
+        key2
+    }
+
+    console.log(obj);                 //{key1: 'hello_1', key2: 'hello_2'}
+</script>
+
+--->              
+
+
+<!---
+<script>
+    let key1 = "hi";
+    let key2 ="angular";
+    let key3 = "class";
+
+    let obj1 = {
+        key1,
+        key2,
+        key3
+    }
+    console.log(obj1);             //{key1: 'hi', key2: 'angular', key3: 'class'}
+</script>
+--->
+
+
+
+
+
+
+
+
+
+
+
+
+
+

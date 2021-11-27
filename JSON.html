@@ -1,0 +1,420 @@
+<!--
+    JSON
+    ******
+=> JSON Stands for Java script object Notation .
+
+=> Json is also called Javascript objects
+
+=> IN real scenario Project is divided into three layers they are 
+    1) FRONT END
+    2) BACK END
+    3) DATA BASE
+
+ => SO in order to send the data over a network we have two formats that are 
+
+     1) XML 
+     2) JSON 
+
+     1) XML=> it is heavy weight Format because it will consume the RAM high level.
+
+     2) JSON => it is light weight Format because it will consume the RAM low level.
+
+=> SO JSON Format is recommened used to send the data.
+
+
+   Syntax
+   ******
+
+   1) Object ---{}
+
+   2) Array ----[]
+
+   3) data ------key & value pairs
+
+   4) ---------- key & value separated by using ":"
+-->
+
+<!---
+<script>
+    let obj = {
+        "sub_one" : "Hello_1",
+        "sub_two" : "Hello_2",
+        "sub_three" : "Hello_3",
+    }
+
+    console.log(obj.sub_one,obj.sub_two,obj.sub_three);             //Hello_1 Hello_2 Hello_3
+</script>
+
+
+
+<script>
+    let test = {
+        "text_one" : "HI",
+        "text_two" : "Hello",
+        "text_three" : "HOW are U"
+    }
+
+    console.log(test.text_one,test.text_two,test.text_three);          //HI Hello HOW are U
+</script>
+
+
+
+
+<script>
+    let demo = {
+        msg_one : "Hi JS",
+        msg_two : "HI Angular",
+        msg_three : "Hi react js",
+        Msg_four  : "Hi Node js"
+    }
+
+    console.log(demo.msg_one,demo.msg_two,demo.msg_three,demo.Msg_four);    //Hi JS HI Angular Hi react js Hi Node js
+</script>
+
+
+
+
+
+<script>
+    let Var = {
+        var_one : "hi",
+        var_two : "bye132"
+    }
+    console.log(Var.var_one,Var.var_two);            //hi bye132
+</script>
+
+
+------>
+
+
+
+
+<!---
+<script>
+    let obj = {
+        "obj1":{"key1":"value1"},
+        "obj2":{"key2" :"value2"},
+        "obj3":{"key3": "value3"}
+       
+    }
+    console.log(obj.obj1.key1,obj.obj2.key2,obj.obj3.key3);       //value1 value2 value3
+</script>
+
+
+<script>
+    let obj1 ={
+        "sub1" :{"key1": "hello_1"},
+        "sub2" :{"key2": "hello_2"},
+        "sub3" :{"key3": "hello_3"}
+    }
+    console.log(obj1.sub1,obj1.sub2,obj1.sub3);       //{key1: 'hello_1'} {key2: 'hello_2'} {key3: 'hello_3'}
+</script>
+
+----->
+
+
+
+
+
+<!---
+<script>
+    let obj = {
+        "key1" : "hello_1",
+        "key2" : "hello_2",
+        "key3" : "hello_3",
+        "key4" : "hello_4"
+    }
+
+    //iterate the json object
+
+    //ES6
+
+    //for....in loop
+
+
+    for(let k in obj){
+        console.log(k)
+        console.log(typeof k);
+        console.log(obj[k]);
+    }
+</script>
+
+
+
+<script>
+    let obj1 = {
+        "key1" : "value1",
+        "key2" : "value2",
+        "key3" : "value3",
+    }
+
+    for(let k in obj1){
+        console.log(k)
+        console.log(obj[k]);
+    }
+</script>
+------>
+
+
+<!---
+<script>
+    let obj2 = {
+        "key1" : "HI_1",
+        "key2" : "HI_2",
+        "key3" : "HI_3"
+    }
+    for(let key in obj2){
+        console.log(key);
+        console.log(obj2[key]);
+    }
+</script>
+--->
+
+
+
+
+
+
+
+<!---
+<script>
+    let obj3 = {
+        "obj4":{
+            "sub_one" : "Angular",
+            "sub_two" : "Javascript",
+            "sub_three" : "java",
+        }
+    }
+    for(let key in obj3.obj4){
+        console.log(obj3.obj4[key])
+    }
+</script>
+
+
+
+<script>
+    let obj = {
+        "obj1":{
+            "var_one" : "HELLO_1",
+            "var_two" : "HELLO_2",
+           "var_three": "HELLO_3"
+        }
+    }
+    for(let key in obj.obj1){
+        console.log(obj.obj1[key]);
+    }
+</script>
+--->
+
+
+
+<!---
+<script>
+    function fun_one(){
+        return "welcome"
+    }
+    console.log(fun_one)
+</script>
+
+---->
+
+
+
+
+
+<!---
+<script>
+    let db = {
+        "oracle" : oracle,
+        "mysql"  : mysql,
+        "mongoDB": mongoDB,
+        "cassandradb" :cassandradb()
+    }
+    function oracle (){
+        return "hello iam oracle driver";
+    }
+    function mysql(){
+        return "hello iam sql developer";
+    }
+    function mongoDB(){
+        return "hello Iam mongoDb"
+    }
+    function cassandradb(){
+        return "hello the Cassandra db conncetion soon...!"
+    }
+    console.log(db.oracle,db.mysql(),db.mongoDB(),db.cassandradb);
+</script>
+
+
+
+
+
+
+<script>
+    let obj = {
+        "java" : java,
+        "advjava": advjava,
+        "spring" : jdbc()
+    }
+    function java(){
+        return "hello Iam java"
+    }
+    function advjava(){
+        return "hello iam advanced java"
+    }
+    function jdbc(){
+        return "hello spring"
+    }
+    console.log(obj.java(),obj.advjava(),obj.spring); //hello Iam java hello iam advanced java hello spring
+</script>
+           
+
+
+
+<script>
+    let obj1 = {
+        "key1" : value1,
+        "key2" : value2
+    }
+    function value1(){
+        return "hello_1";
+    }
+    function value2(){
+        return "hello_2";
+    }
+
+    console.log(obj1.key1(),obj1.key2());   //hello_1 hello_2
+</script>
+
+------>
+
+
+
+
+
+
+
+<!---
+<script>
+    let obj = {
+        "key1" : ()=>{return " hello _1"},
+        "key2" : ()=>{return " hello_2 "},
+        "key3" : ()=>{return " hello_3 "},
+        "key4" : ()=>{return " hello_4 "},
+    }
+    console.log(obj.key1,obj.key2(),obj.key3(),obj.key4()); //()=>{return " hello _1"} ' hello_2 ' ' hello_3 ' ' hello_4 '
+</script>
+
+
+
+
+
+
+
+<script>
+    let db1 = {
+        "key1" : ()=>{return "hi_1"},
+        "key2" : ()=>{return "hi_2"},
+        "key3" : ()=>{return "hi_3"},
+    }
+    console.log(db1.key1(),db1.key2()) //hi_1 hi_2
+</script>
+------>
+
+
+
+
+
+
+<!--
+<script>
+    let obj = {
+        "key1" : "value1",
+        "key2" : "value2",
+        "key3" : "value3"
+    }
+    console.log(Object.keys(obj)); //(3) ['key1', 'key2', 'key3']
+    console.log(Object.values(obj)); //(3) ['value1', 'value2', 'value3']
+</script>
+
+
+
+<script>
+    let obj1 = {
+        "key1" : "hello_1",
+        "key2" : "hello_2",
+        "key3" : "hello_3"
+    }
+    console.log(Object.keys(obj1.key1));
+    console.log(Object.values(obj1)); //['hello_1', 'hello_2', 'hello_3']
+</script>
+
+
+
+------>
+
+
+
+
+
+<!---
+
+<script>
+    let obj = {
+        "key1" : "value1"
+    }
+
+    let obj2 = {...obj};
+
+    console.log(obj);   //{key1: 'value1'}
+    console.log(obj2);  //{key1: 'value1'}
+
+</script>
+
+
+//deep cloning
+<script>
+    let obj1 = {
+        "key1": "value1",
+        "key2" : "value2",
+
+    }
+    let obj3 = {...obj1}
+
+    obj1.key3 = "value3";
+
+    console.log(obj1);      //{key1: 'value1', key2: 'value2', key3: 'value3'}
+    console.log(obj3);      //{key1: 'value1', key2: 'value2'}
+
+
+</script>
+
+
+
+<script>
+    let obj4 = {
+        "key1" : "hello_1"
+    }
+
+    let obj5 = {...obj4}
+  
+     console.log(obj4);         //{key1: 'hello_1'}
+
+     console.log(obj5);          //{key1: 'hello_1'}
+
+
+    obj4.key1 = "hello_2"
+    obj5.key1 = "hello_3"
+    console.log(obj4);           //{key1: 'hello_2'}
+    console.log(obj5);          //{key1: 'hello_3'}
+
+</script>
+
+
+----->
+
+
+
+
+
+
